@@ -18,7 +18,7 @@ for i in ${DISKS[@]} ; do
     JSON=$(echo "${JSON}{")
     JSON=$(echo "${JSON}\"disk\":\"${i}\",")
     JSON=$(echo "${JSON}\"model\":\"${MODEL}\",")
-    JSON=$(echo "${JSON}\"serial\":\"${SERIAL}\"")
+    JSON=$(echo "${JSON}\"serial\":\"${SERIAL}\",")
     JSON=$(echo "${JSON}\"capacity\":\"${CAPACITY}\",")
     JSON=$(echo "${JSON}\"temperature\":${TEMP}")
     JSON=$(echo "${JSON}},")
