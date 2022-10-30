@@ -14,18 +14,18 @@ exec_disktemp,capacity=bytes,disk=/dev/sda,host=telegraf2,model=WDC\ WD101EFAX-6
 
 #### docker-compose
 ```
-    telegraf2:
-        container_name: telegraf2
-        hostname: telegraf2
-        image: casperghst42/telegraf
-        #restart: unless-stopped
-        user: root:root
-        networks:
-            mynetwork:
-        volumes:
-            - '/etc/localtime:/etc/localtime:ro'
-            - '/etc/timezone:/etc/timezone:ro'
-            - './data/telegraf.conf:/etc/telegraf/telegraf.conf:ro'
+telegraf2:
+    container_name: telegraf2
+    hostname: telegraf2
+    image: casperghst42/telegraf
+    restart: unless-stopped
+    user: root:root
+    networks:
+       mynetwork:
+    volumes:
+       - '/etc/localtime:/etc/localtime:ro'
+       - '/etc/timezone:/etc/timezone:ro'
+       - './data/telegraf.conf:/etc/telegraf/telegraf.conf:ro'
 ```
 #### telegraf.conf
 ```
