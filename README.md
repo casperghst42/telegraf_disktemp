@@ -39,3 +39,7 @@ telegraf2:
       "/bin/bash /disktemp.sh",
     ]
 ```
+#### To build docker image
+1. To be able to use "--chmod=755" do: export DOCKER_BUILDKIT=1
+2. Pull the latest image of telegraf: docker pull telegraf:latest
+3. Build the image: docker build -t << what ever you feel like >>/telegraf .
